@@ -1,6 +1,4 @@
 from tkinter import END
-from turtle import save
-
 
 def validate_student_id_action(new_value):
     if new_value == "":

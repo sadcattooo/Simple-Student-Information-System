@@ -12,29 +12,7 @@ from tkinter import PhotoImage
 editing_iid = None
 current_view = "students"
 
-style = Style()
-style.theme_use('clam')
 
-# Button (rounded, pastel, hover)
-style.configure("Pastel.TButton", font=("Segoe UI", 11, "bold"), padding=10)
-style.map("Pastel.TButton",
-          background=[('active', '#b3e0ff'), ('!disabled', '#a8d8ff')],
-          foreground=[('active', '#2c3e50'), ('!disabled', '#2c3e50')])
-
-# Entry & Combobox
-style.configure("Pastel.TEntry", font=("Segoe UI", 10), padding=6)
-style.configure("Pastel.TCombobox", font=("Segoe UI", 10))
-style.map("Pastel.TCombobox", fieldbackground=[('readonly', 'white')])
-
-# Treeview (alternating rows, modern headers)
-style.configure("Pastel.Treeview", font=("Segoe UI", 10), rowheight=25)
-style.configure("Pastel.Treeview.Heading", font=("Segoe UI", 11, "bold"), padding=6)
-style.map("Pastel.Treeview",
-          background=[('selected', '#c4f4e8'), ('!selected', '#f8f9fa')],
-          foreground=[('selected', '#2c3e50')])
-
-# Required note
-style.configure("RedNote.TLabel", font=("Segoe UI", 10, "italic"), foreground="#e74c3c")
 
 
 # ─────────────────────────────────────────────────────────────
@@ -592,6 +570,37 @@ window.configure(bg="#fbfcfc")
 window.columnconfigure(0, weight=1)
 window.columnconfigure(1, weight=3)
 window.rowconfigure(0, weight=1)
+
+# Style
+
+style = Style()
+style.theme_use('clam')
+
+# Button (rounded, pastel, hover)
+style.configure("Pastel.TButton", font=("Segoe UI", 11, "bold"), padding=10)
+style.map("Pastel.TButton",
+          background=[('active', '#b3e0ff'), ('!disabled', '#a8d8ff')],
+          foreground=[('active', '#2c3e50'), ('!disabled', '#2c3e50')])
+
+# Entry & Combobox
+style.configure("Pastel.TEntry", font=("Segoe UI", 10), padding=6)
+style.configure("Pastel.TCombobox", font=("Segoe UI", 10))
+style.map("Pastel.TCombobox", fieldbackground=[('readonly', 'white')])
+
+# Treeview (alternating rows, modern headers)
+style.configure("Pastel.Treeview", font=("Segoe UI", 10), rowheight=25)
+style.configure("Pastel.Treeview.Heading", font=("Segoe UI", 11, "bold"), padding=6)
+style.map("Pastel.Treeview",
+          background=[('selected', '#c4f4e8'), ('!selected', '#f8f9fa')],
+          foreground=[('selected', '#2c3e50')])
+
+# Required note
+style.configure("RedNote.TLabel", font=("Segoe UI", 10, "italic"), foreground="#e74c3c")
+
+
+
+
+
 
 # ── Info and CRUDL Button Frame ──────────────────────────────
 Info_btn_frame = tkinter.Frame(window, bg="#fbfcfc")
